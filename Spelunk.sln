@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.20623.1 VSUPREVIEW
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spelunk.Web", "Spelunk.Web\Spelunk.Web.csproj", "{1C0BABF9-69E8-4891-A0DB-274D2BC7FF90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spelunk.Core", "Spelunk.Core\Spelunk.Core.csproj", "{9D2FDD95-9DD4-47C6-9B9E-38390D27E36E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C0BABF9-69E8-4891-A0DB-274D2BC7FF90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C0BABF9-69E8-4891-A0DB-274D2BC7FF90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C0BABF9-69E8-4891-A0DB-274D2BC7FF90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C0BABF9-69E8-4891-A0DB-274D2BC7FF90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D2FDD95-9DD4-47C6-9B9E-38390D27E36E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D2FDD95-9DD4-47C6-9B9E-38390D27E36E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D2FDD95-9DD4-47C6-9B9E-38390D27E36E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D2FDD95-9DD4-47C6-9B9E-38390D27E36E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

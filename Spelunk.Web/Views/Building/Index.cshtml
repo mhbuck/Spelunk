@@ -1,0 +1,39 @@
+﻿@model Spelunk.Web.Models.ListingViewModel
+@{
+    ViewBag.Title = "Building List";
+}
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Get))
+{
+    <p>Search: @Html.TextBoxFor(model => model.TextFilter) </p>
+    <input type="submit" value="Search" />
+}
+
+<table class="table table-hover table-bordered">
+    <thead>
+        <tr>
+            <th>Building Id</th>
+            <th>Building Name</th>
+            <th>Area</th>
+        </tr>
+    </thead>
+    @if (Model.Results.Count > 0)
+    {
+        foreach (var building in Model.Results)
+        {
+            <tr>
+                <td>@building.BuildingId</td>
+                <td>@building.BuildingName</td>
+                <td>@building.Area</td>
+                <td>@Html.ActionLink("Edit", "Edit", new { id = building.BuildingId})</td>
+            </tr>
+        }
+    }
+    else
+    {
+        <tr>
+            <td>No results returned</td>
+        </tr>
+    }
+</table>
+

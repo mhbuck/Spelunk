@@ -1,0 +1,22 @@
+﻿@model Spelunk.Core.Models.BuildingModel
+@{
+    ViewBag.Title = "Edit Building";
+}
+
+@using (Html.BeginForm("Edit", "Building", FormMethod.Post))
+{
+    <span>
+        @Html.LabelFor(m => m.BuildingId)
+        @Html.DisplayFor(m => m.BuildingId)
+        @Html.HiddenFor(m => m.BuildingId)
+    </span>
+    <span>
+        @Html.LabelFor(m => m.BuildingName)
+        @Html.EditorFor(m => m.BuildingName)
+    </span>
+    <span>
+        @Html.LabelFor(m => m.Area)
+        @Html.EditorFor(m => m.Area)
+    </span>
+    <p><input type="submit" value="Save" /></p>
+}
