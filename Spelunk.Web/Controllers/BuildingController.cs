@@ -19,9 +19,9 @@ namespace Spelunk.Web.Controllers
             this._buildingService = buildingService;
         }
 
-        public ActionResult Index(string textFilter)
+        public async Task<ActionResult> Index(string textFilter)
         {
-            var buildings = this._buildingService.GetAllBuildings(textFilter);
+            var buildings = await this._buildingService.GetAllBuildings(textFilter);
 
             ListingViewModel model = new ListingViewModel();
             model.TextFilter = textFilter;
@@ -31,13 +31,13 @@ namespace Spelunk.Web.Controllers
         }
 
         [HttpGet]
-        public ActionResult Edit(int? Id)
+        public async Task<ActionResult> Edit(int? Id)
         {
             BuildingModel model = new BuildingModel();
 
             if (Id.HasValue)
             {
-                model = this._buildingService.GetBuildingById(Id.Value);
+                model = await this._buildingService.GetBuildingById(Id.Value);
             }
             else
             {
@@ -48,9 +48,9 @@ namespace Spelunk.Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(BuildingModel model)
+        public async Task<ActionResult> Edit(BuildingModel model)
         {
-            this._buildingService.SaveBuilding(model);
+            await this._buildingService.SaveBuilding(model);
 
             return this.RedirectToAction("Edit", new { id = model.BuildingId });
         }

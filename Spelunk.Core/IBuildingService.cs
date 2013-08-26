@@ -9,10 +9,10 @@ namespace Spelunk.Core
 {
     public interface IBuildingService
     {
-        IList<BuildingModel> GetAllBuildings(string filterName);
+        Task<IList<BuildingModel>> GetAllBuildings(string filterName);
 
-        BuildingModel GetBuildingById(int buildingId);
+        Task<BuildingModel> GetBuildingById(int buildingId);
 
-        BuildingModel SaveBuilding(BuildingModel building);
+        Task<BuildingModel> SaveBuilding(BuildingModel building);
     }
 }

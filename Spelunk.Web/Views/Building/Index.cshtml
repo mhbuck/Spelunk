@@ -3,7 +3,7 @@
     ViewBag.Title = "Building List";
 }
 
-@using (Html.BeginForm("Index", "Home", FormMethod.Get))
+@using (Html.BeginForm("Index", "Building", FormMethod.Get))
 {
     <p>Search: @Html.TextBoxFor(model => model.TextFilter) </p>
     <input type="submit" value="Search" />
@@ -25,7 +25,7 @@
                 <td>@building.BuildingId</td>
                 <td>@building.BuildingName</td>
                 <td>@building.Area</td>
-                <td>@Html.ActionLink("Edit", "Edit", new { id = building.BuildingId})</td>
+                <td>@Html.ActionLink("Edit", "Edit", new { id = building.BuildingId })</td>
             </tr>
         }
     }
