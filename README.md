@@ -3,5 +3,5 @@ This is a repo playing around with the idea of having an interface which is part
 
 Tasks:
 * Create base application - Done
-* Move to using tasks
+* Move to using tasks - Done
 * Move to using refit with web api.
