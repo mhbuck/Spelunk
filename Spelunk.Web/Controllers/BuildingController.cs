@@ -1,4 +1,5 @@
-﻿using Spelunk.Core;
+﻿using Refit;
+using Spelunk.Core;
 using Spelunk.Core.Models;
 using Spelunk.Web.Models;
 using System;
@@ -17,6 +18,7 @@ namespace Spelunk.Web.Controllers
         public BuildingController()
         {
             this._buildingService = new BuildingService(); // Standard approach
+            this._buildingService = RestService.For<IBuildingService>("http://localhost:53953/");
         }
 
         public async Task<ActionResult> Index(string textFilter)

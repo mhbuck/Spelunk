@@ -10,13 +10,13 @@ namespace Spelunk.Core
 {
     public interface IBuildingService
     {
-        [Get("api/Buildings")]
+        [Get("/api/Buildings")]
         Task<IList<BuildingModel>> GetAllBuildings(string filterName);
 
-        [Get("api/Buildings/{buildingId:int}")]
+        [Get("/api/Buildings/{buildingid}")]
         Task<BuildingModel> GetBuildingById(int buildingId);
 
-        [Get("api/building/SaveBuilding")]
-        Task<BuildingModel> SaveBuilding(BuildingModel building);
+        [Post("/api/building/SaveBuilding")]
+        Task<BuildingModel> SaveBuilding([Body] BuildingModel building);
     }
 }
