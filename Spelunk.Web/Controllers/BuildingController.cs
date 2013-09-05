@@ -14,9 +14,9 @@ namespace Spelunk.Web.Controllers
     {
         private IBuildingService _buildingService;
 
-        public BuildingController(IBuildingService buildingService)
+        public BuildingController()
         {
-            this._buildingService = buildingService;
+            this._buildingService = new BuildingService(); // Standard approach
         }
 
         public async Task<ActionResult> Index(string textFilter)
