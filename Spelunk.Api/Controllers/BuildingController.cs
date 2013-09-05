@@ -33,7 +33,7 @@ namespace Spelunk.Api.Controllers
         [HttpPost("api/Buildings")]
         public Task<BuildingModel> SaveBuilding(BuildingModel building)
         {
-            return this.SaveBuilding(building);
+            return this._buildingService.SaveBuilding(building);
         }
     }
 }
